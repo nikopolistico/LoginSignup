@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-up-Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --accent-color: #8672FF;
+            --base-color: white;
+            --text-color: #2E2B41;
+            --input-color: #F3F0FF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            text-align: center;
+        }
+
+        form input:hover {
+            border-color: var(--accent-color);
+        }
+
+        form input:focus {
+            outline: none;
+            border-color: var(--text-color);
+        }
+
+        form input::placeholder {
+            color: var(--text-color);
+        }
+
+        form button {
+            margin-top: 10px;
+            border: none;
+            border-radius: 1000px;
+            padding: 0.85em 4em;
+            background-color: var(--accent-color);
+            color: var(--base-color);
+            font: inherit;
+            font-weight: 600;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 150ms ease;
+        }
+
+        form button:hover {
+            background-color: var(--text-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        form div.incorrect label {
+            background-color: #f06272;
+        }
+
+        form div.incorrect input {
+            border-color: #f06272;
+        }
+    </style>
+</head>
+<body>
+    <div class="2xl:container h-screen m-auto">
+        <div class="fixed inset-y-0 right-0 w-8/12 lg:block hidden">
+            <span class="absolute right-6 bottom-6 text-sm">
+                Video by MART PRODUCTION from <a href="https://www.pexels.com/" target="_blank" title="Pexels">Pexels</a>
+            </span>
+            <video class="w-full h-full object-cover" loop autoplay muted src="../videos/login.mp4" poster="background.jpg"></video>
+        </div>
+    <div class="bg-[var(--base-color)] h-full max-w-[600px] w-[90%] sm:w-[90%] md:w-[50%] lg:w-[40%] xl:w-[30%] p-6 rounded-r-[20px] flex flex-col items-center justify-center">
+        <h1 class="text-3xl font-bold mb-5">Login</h1>
+        <form id="form" class="w-full flex flex-col items-center gap-4">
+
+            <!-- Email -->
+            <div class="w-full flex">
+                <label for="email-input" class="h-12 w-12 bg-[var(--accent-color)] text-white rounded-l-[10px] flex justify-center items-center text-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                        <path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/>
+                    </svg>
+                </label>
+                <input type="email" id="email-input" placeholder="Email" class="flex-grow h-12 p-4 font-inherit rounded-r-[10px] border-2 border-[var(--input-color)] border-l-0 bg-[var(--input-color)] focus:border-[var(--text-color)] transition ease-[150ms] w-full">
+            </div>
+
+            <!-- Password -->
+            <div class="w-full flex">
+                <label for="password-input" class="h-12 w-12 bg-[var(--accent-color)] text-white rounded-l-[10px] flex justify-center items-center text-2xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#fff">
+                        <path d="M240-80q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640h40v-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240Zm0-80h480v-400H240v400Zm240-120q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM360-640h240v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85v80ZM240-160v-400 400Z"/>
+                    </svg>
+                </label>
+                <input type="password" id="password-input" placeholder="Password" class="flex-grow h-12 p-4 font-inherit rounded-r-[10px] border-2 border-[var(--input-color)] border-l-0 bg-[var(--input-color)] focus:border-[var(--text-color)] transition ease-[150ms] w-full">
+            </div>
+                        <!-- Submit Button -->
+            <button type="submit" class="mt-4 px-8 py-3 bg-[var(--accent-color)] text-[var(--base-color)] rounded-full font-semibold uppercase transition-colors duration-150 hover:bg-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--text-color)]">
+                            Sign-in
+                        </button>
+            
+                        <!-- Login Link -->
+            <p class="mt-4 text-sm">New here?<a href="signup.html" class="text-[var(--accent-color)] hover:underline"> Sign-up</a>
+                </p>
+            </form>
+                <!-- Error Message -->
+            <p id="error-message" class="mt-10 text-red-500 "></p>
+        </div>
+    </div>
+        <script type="text/javascript" src="validation.js" defer></script>
+    </body>
+</html>
+            
